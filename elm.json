@@ -1,0 +1,18 @@
+{
+    "type": "package",
+    "name": "w0rm/elm-timestep",
+    "summary": "Decouple simulation rate from display refresh rate with a fixed timestep",
+    "license": "BSD-3-Clause",
+    "version": "1.0.0",
+    "exposed-modules": [
+        "Timestep"
+    ],
+    "elm-version": "0.19.0 <= v < 0.20.0",
+    "dependencies": {
+        "elm/core": "1.0.0 <= v < 2.0.0",
+        "ianmackenzie/elm-units": "2.7.0 <= v < 3.0.0"
+    },
+    "test-dependencies": {
+        "elm-explorations/test": "2.2.0 <= v < 3.0.0"
+    }
+}
