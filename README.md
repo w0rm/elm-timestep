@@ -52,11 +52,12 @@ step model =
     { model | position = model.position |> Quantity.plus traveled }
 ```
 
-## `maxSteps`
+## Spiral of death
 
-Caps how many steps a single `advance` can run, so a slow frame can’t
-trigger an ever-growing catch-up burst (the *spiral of death*). Past
-the cap, the simulation goes into slow-motion instead.
+A slow frame produces a big Δt, which produces a big catch-up burst,
+which makes the next frame even slower. `maxSteps` caps how many
+steps a single `advance` can run, so the catch-up can’t snowball.
+Past the cap, the simulation goes into slow motion instead.
 
 - `maxSteps = 1` — never catch up; hiccups cost simulated time.
 - `maxSteps = 2` — absorb one missed step. A good default.
