@@ -24,7 +24,7 @@ import Duration exposing (Duration)
 import Quantity
 
 
-{-| The accumulator state. Store one in your model.
+{-| The accumulator state. Lives on your model as `timestep`.
 -}
 type Timestep
     = Timestep
@@ -64,7 +64,10 @@ init config =
 Blend the previous and current simulation states by this to render
 smooth motion at any display rate:
 
-    interpolate (Timestep.progress model.timestep) model.prev model.curr
+    interpolateFrom
+        model.previous
+        model.current
+        (Timestep.progress model.timestep)
 
 -}
 progress : Timestep -> Float
