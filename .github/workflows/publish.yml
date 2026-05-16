@@ -16,6 +16,8 @@ jobs:
   publish:
     needs: test
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - run: git config --global user.name "Andrey Kuzmin"
       - run: git config --global user.email "hi@unsoundscapes.com"

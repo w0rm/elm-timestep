@@ -22,8 +22,10 @@ if [ $version != $elm_version ]; then
 fi
 
 git add elm.json
-git commit -m "Bump to $version"
-git push
+if ! git diff --cached --quiet; then
+  git commit -m "Bump to $version"
+  git push
+fi
 last_commit=$(git rev-parse HEAD)
 
 git rm -rf --ignore-unmatch .github examples review scripts tests flake.nix flake.lock docs.json
