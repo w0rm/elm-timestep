@@ -104,4 +104,4 @@ state.
 
 ## Examples
 
-- Bouncing ball ([source](https://github.com/w0rm/elm-timestep/tree/main/examples/src/BouncingBall.elm), [demo](https://unsoundscapes.com/elm-timestep/examples/bouncing-ball/)) — naïve variable-Δt vs fixed timestep, with a stall button.
+- Bouncing ball ([source](https://github.com/w0rm/elm-timestep/tree/327cead9ea6273e1d7844b6667b0e4e4b1a9e596/examples/src/BouncingBall.elm), [demo](https://unsoundscapes.com/elm-timestep/1.0.0/examples/bouncing-ball/)) — naïve variable-Δt vs fixed timestep, with a stall button.
